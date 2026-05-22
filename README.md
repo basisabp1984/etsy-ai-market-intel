@@ -16,6 +16,14 @@
 - **Vercel alias:** [https://etsy-ai-market-intel.vercel.app](https://etsy-ai-market-intel.vercel.app)
 - **GitHub:** [basisabp1984/etsy-ai-market-intel](https://github.com/basisabp1984/etsy-ai-market-intel)
 
+> **This is a reusable SaaS MVP skeleton.** The visible product (Etsy toy market
+> intelligence) is a placeholder — the architecture, API-first contract, React
+> Portal interactions, light premium-SaaS theme, build pipeline, and deploy
+> automation are the reusable parts. Tell me what your product is — I will swap
+> the mock data, brand strings, and AI prompts and give you a live URL in a
+> couple of days. See [`docs/CUSTOMIZE.md`](docs/CUSTOMIZE.md) for the exact
+> swap checklist.
+
 ---
 
 ## What is this?
