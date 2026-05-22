@@ -1,94 +1,142 @@
-# MarketIntel AI for Etsy Toy Sellers
+# MarketIntel AI — Market Intelligence for Etsy Toy Sellers
 
-This is a complete demo SaaS prototype built with Next.js, React, TypeScript, and Tailwind CSS.
+> An AI market-intelligence platform for Etsy toy sellers — trending niches,
+> competitor price moves, TikTok signals, opportunity scoring, research runs, and an
+> AI analyst. Built as an API-first MVP prototype on Next.js + React + TypeScript +
+> Tailwind.
 
-Live demo: https://marketintel.radai-1984.dev
+![Next.js](https://img.shields.io/badge/Next.js-16-000?logo=nextdotjs)
+![React](https://img.shields.io/badge/React-19-149eca?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38bdf8?logo=tailwindcss)
+![License](https://img.shields.io/badge/License-MIT-22c55e)
+![Deploy](https://img.shields.io/badge/Vercel-Live-000?logo=vercel)
 
-GitHub repository: https://github.com/basisabp1984/etsy-ai-market-intel
+- **Live demo:** [https://marketintel.radai-1984.dev](https://marketintel.radai-1984.dev)
+- **Vercel alias:** [https://etsy-ai-market-intel.vercel.app](https://etsy-ai-market-intel.vercel.app)
+- **GitHub:** [basisabp1984/etsy-ai-market-intel](https://github.com/basisabp1984/etsy-ai-market-intel)
 
-The product concept: an AI market intelligence platform for Etsy toy sellers. It helps sellers monitor fast-growing niches, competitor price moves, TikTok trend signals, product opportunities, research runs, and AI analyst summaries.
+---
 
-No real Etsy API, TikTok API, scraping, authentication, database, or paid service is used. Everything runs on mock data, but the structure is intentionally shaped like a real MVP skeleton.
+## What is this?
 
-## Run Locally
+MarketIntel AI is a working prototype of an AI-assisted market-intelligence cockpit
+for Etsy toy sellers. A small-business operator opens it in the morning and can see —
+at a glance — which toy niches are growing fastest, which competitors are aggressively
+moving on price, which TikTok signals are surfacing new demand, and which product
+opportunities to test next.
+
+Every screen consumes mock JSON from Next.js route handlers shaped exactly like a
+real backend. There is no real Etsy API, TikTok API, scraping, database, auth, or
+LLM provider in this repo. The architecture is intentionally built so each of those
+layers can be replaced without touching the dashboard. See
+[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) §5.
+
+## What you'll see
+
+The product covers six seller-facing surfaces:
+
+| Surface         | What's on it                                                                  |
+|-----------------|-------------------------------------------------------------------------------|
+| **Dashboard**   | KPIs, trending-niches table with momentum sparklines, opportunity bar chart, competitor watch, products to watch |
+| **Trends**      | Niche cards with growth, TikTok mentions, trend score; TikTok-signal bar chart |
+| **Competitors** | Seller table — listings, average price, price move, review velocity, risk; products by tracked sellers |
+| **Research**    | Research runs ledger — scope, signals collected, findings, status              |
+| **Reports**     | Generated market reports with period, summary, and opportunity score          |
+| **Settings**    | Integration readiness and alert preferences                                   |
+
+Dashboard, schematically:
+
+```
+┌───────────────────────────────────────────────────────────────────────────────┐
+│ AI market intelligence                                                        │
+│ Etsy toy signals, competitor moves, and niche opportunities in one cockpit.   │
+│                                                                               │
+│ ── This week's strongest read ─────────────────────────────────────────       │
+│ Tactile learning toys are pulling away. Busy boards = low comp; magnetic      │
+│ puzzles = best growth velocity.                                               │
+│                                                                               │
+│ ── KPI cards ──────────────────────────────────────────────────────────       │
+│ Trending niches  4    Avg price movement  +2.1%    Competitor activity  2     │
+│ TikTok signal score  87    Opportunity score  85                              │
+│                                                                               │
+│ ┌─── Trending Niches ─────────────────────┐ ┌── Opportunity Ranking ──┐       │
+│ │ Montessori magnetic puzzles   +28% Med  │ │ ████████████████  91    │       │
+│ │ Miniature plush keychains     +22% High │ │ ███████████████   78    │       │
+│ │ Wooden sensory busy boards    +19% Low  │ │ █████████████     88    │       │
+│ │ DIY felt story kits           +14% Low  │ │ ████████████      84    │       │
+│ └─────────────────────────────────────────┘ └─────────────────────────┘       │
+│                                                                               │
+│ ┌─── Competitor Watch ────────────────────┐ ┌── Products to Watch ────┐       │
+│ │ TinyMochiCrafts          -13.4% move    │ │ Magnetic Safari Puzzle  │       │
+│ │ CraftyPebbleKids          -7.9% move    │ │ Personalized Busy Board │       │
+│ └─────────────────────────────────────────┘ │ Kawaii Pocket Plush     │       │
+│                                              │ Felt Farm Story Kit    │       │
+│                                              └─────────────────────────┘      │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+Floating bottom-right: [AI Analyst chat]   Ctrl+K opens Command Palette
+```
+
+## Tech stack
+
+- **Next.js 16** App Router with route handlers
+- **React 19** with Server + Client Components
+- **TypeScript 5** strict
+- **Tailwind CSS 3** with a light premium-SaaS token set
+- **lucide-react** for iconography
+- **Vercel** for deployment, **Cloudflare** for the DNS zone
+
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open `http://localhost:3000`.
+Open `http://localhost:3000`. No environment variables required — the prototype
+ships with mock data.
 
-The deployed demo is available at:
+## Documentation
 
-```text
-https://marketintel.radai-1984.dev
+| Doc | What it covers |
+|-----|----------------|
+| [`README.md`](README.md) | This file — product overview, what you'll see, links |
+| [`TECHNICAL_BRIEF.md`](TECHNICAL_BRIEF.md) | Product framing, architecture summary, real-MVP path |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | System diagram, request flow, folder layout, decisions overview |
+| [`docs/API.md`](docs/API.md) | Full endpoint reference: shape, examples, curl commands |
+| [`docs/adr/`](docs/adr/) | Architecture Decision Records — why we chose what we chose |
+| [`DEPLOYMENT.md`](DEPLOYMENT.md) | GitHub + Vercel + Cloudflare DNS step-by-step |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to develop, commit conventions, folder rules |
+| [`CHANGELOG.md`](CHANGELOG.md) | Version history |
+| [`LICENSE`](LICENSE) | MIT |
+
+## API surface — at a glance
+
+```
+GET  /api/trends           → trends list + dashboard KPIs
+GET  /api/competitors      → competitor snapshot
+GET  /api/products         → tracked products
+GET  /api/research         → research-runs ledger
+GET  /api/reports          → generated market reports
+POST /api/research/run     → trigger a mock research run
+POST /api/ai/analyze       → AI analyst Q&A
 ```
 
-## What Is Included
+Full reference with shapes, examples, and curl commands is in
+[`docs/API.md`](docs/API.md).
 
-- Main dashboard
-- Trends page
-- Competitors page
-- Research runs page
-- Reports page
-- Settings page
-- Left navigation and top search bar
-- Responsive desktop and mobile layouts
-- KPI cards, charts, tables, badges, and smooth SaaS interactions
-- Mock AI Analyst chat
-- Mock research run modal and completion toast
-- Command palette with `Ctrl+K`
+## React Portals — four interactions
 
-## Additional Documentation
+All four mount through [`src/components/portals/Portal.tsx`](src/components/portals/Portal.tsx)
+to `document.body`. Why portals and not DOM siblings — see
+[ADR-0003](docs/adr/0003-react-portals-for-overlays.md).
 
-- `TECHNICAL_BRIEF.md` explains the architecture, API-first design, mock-data boundary, React Portals, and real MVP path.
-- `DEPLOYMENT.md` explains how to publish the project to GitHub, deploy it to Vercel, attach a custom domain, and present it to a founder.
+1. **Floating AI Analyst panel** — bottom-right chat, mock LLM with seeded questions.
+2. **Run-New-Research modal** — form that posts to `/api/research/run`.
+3. **Command Palette** — `Ctrl+K` for global navigation and quick actions.
+4. **Toast host** — research-completion notifications.
 
-## API-First Structure
+## License
 
-The frontend consumes mock API routes as if they were real backend endpoints:
-
-- `GET /api/trends`
-- `GET /api/competitors`
-- `GET /api/products`
-- `GET /api/research`
-- `POST /api/research/run`
-- `POST /api/ai/analyze`
-- `GET /api/reports`
-
-The mock source of truth is in `src/lib/mock-data.ts`. The route handlers live under `src/app/api/*/route.ts`.
-
-This keeps the UI separate from the data boundary. Later, the mock route handlers can be replaced with database reads, external API clients, queue jobs, scraping agents, or LLM calls without redesigning the React screens.
-
-## Where Next.js Is Used
-
-- App Router structure in `src/app`
-- Route handlers for API endpoints in `src/app/api`
-- File-based routing for SaaS pages
-- Root layout in `src/app/layout.tsx`
-- Client components where interactivity is needed
-
-## Where React Portals Are Used
-
-All portal UI is mounted through `src/components/portals/Portal.tsx`.
-
-Portal-based interactions:
-
-- Floating AI Analyst panel: `src/components/portals/AiAnalystPanel.tsx`
-- Run New Research modal: `src/components/portals/ResearchModal.tsx`
-- Command palette opened by `Ctrl+K`: `src/components/portals/CommandPalette.tsx`
-- Toast notifications after research completion: `src/components/portals/ToastHost.tsx`
-
-## How Real Systems Can Be Connected Later
-
-- Replace `src/lib/mock-data.ts` with database models and seed data.
-- Replace route handlers with real service calls.
-- Add Etsy API integration or a compliant data ingestion pipeline.
-- Add TikTok signal collectors or third-party trend data providers.
-- Add background research agents using queues and scheduled jobs.
-- Add auth with a provider such as Auth.js, Clerk, or a custom session layer.
-- Add persistent chat and report storage.
-- Replace mock AI responses with an LLM provider behind `/api/ai/analyze`.
-
-The current goal is not production infrastructure. The goal is a credible interactive MVP skeleton that shows product thinking, architecture, and UI behavior.
+[MIT](LICENSE) © 2026 Andrii Radkobski.
