@@ -10,6 +10,16 @@ Use two public links:
 The live demo lets a founder experience the product.
 The GitHub repository lets a technical reviewer inspect the architecture.
 
+Current public links:
+
+```text
+Live demo:
+https://etsy-ai-market-intel.vercel.app
+
+GitHub:
+https://github.com/basisabp1984/etsy-ai-market-intel
+```
+
 ## GitHub
 
 Create a public repository, for example:
@@ -53,6 +63,27 @@ etsy-demo.yourdomain.com
 
 Vercel will show the DNS record to add.
 
+For this project, the intended custom domain is:
+
+```text
+marketintel.radai-1984.dev
+```
+
+Vercel found that `radai-1984.dev` uses Cloudflare nameservers. Add this DNS record in Cloudflare:
+
+```text
+Type: A
+Name: marketintel
+Value: 76.76.21.21
+Proxy status: DNS only
+```
+
+After DNS propagation, Vercel can issue the certificate and the demo can be shared at:
+
+```text
+https://marketintel.radai-1984.dev
+```
+
 Usually this is either:
 
 ```text
@@ -69,10 +100,10 @@ After DNS propagation, the demo will open on the custom domain.
 I built an API-first MVP skeleton for an AI market intelligence SaaS for Etsy toy sellers.
 
 Live demo:
-https://YOUR_DEMO_DOMAIN
+https://etsy-ai-market-intel.vercel.app
 
 GitHub:
-https://github.com/YOUR_USERNAME/etsy-ai-market-intel
+https://github.com/basisabp1984/etsy-ai-market-intel
 
 Notes:
 - Mock data only.

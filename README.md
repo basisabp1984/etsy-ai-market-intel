@@ -2,6 +2,10 @@
 
 This is a complete demo SaaS prototype built with Next.js, React, TypeScript, and Tailwind CSS.
 
+Live demo: https://etsy-ai-market-intel.vercel.app
+
+GitHub repository: https://github.com/basisabp1984/etsy-ai-market-intel
+
 The product concept: an AI market intelligence platform for Etsy toy sellers. It helps sellers monitor fast-growing niches, competitor price moves, TikTok trend signals, product opportunities, research runs, and AI analyst summaries.
 
 No real Etsy API, TikTok API, scraping, authentication, database, or paid service is used. Everything runs on mock data, but the structure is intentionally shaped like a real MVP skeleton.
@@ -14,6 +18,12 @@ npm run dev
 ```
 
 Then open `http://localhost:3000`.
+
+The deployed demo is available at:
+
+```text
+https://etsy-ai-market-intel.vercel.app
+```
 
 ## What Is Included
 

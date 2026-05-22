@@ -4,6 +4,10 @@
 
 MarketIntel AI is a demo SaaS prototype for Etsy toy sellers.
 
+Live demo: https://etsy-ai-market-intel.vercel.app
+
+GitHub repository: https://github.com/basisabp1984/etsy-ai-market-intel
+
 It helps sellers understand:
 
 - which toy niches are growing;
