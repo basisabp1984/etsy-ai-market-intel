@@ -188,3 +188,6 @@ through `process.env` and store it in the Vercel project settings — never comm
 The Vercel deployment-protection feature is currently *off* on this project so that
 prospective sellers can open the live URL without an account. If you fork it into a
 real product, turn protection back on while the audience is invite-only.
+
+For the full picture — what is intentionally absent, what arrives before production,
+and how to report a vulnerability — see [`SECURITY.md`](../SECURITY.md).
