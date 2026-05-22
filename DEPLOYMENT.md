@@ -14,7 +14,7 @@ Current public links:
 
 ```text
 Live demo:
-https://etsy-ai-market-intel.vercel.app
+https://marketintel.radai-1984.dev
 
 GitHub:
 https://github.com/basisabp1984/etsy-ai-market-intel
@@ -84,6 +84,8 @@ After DNS propagation, Vercel can issue the certificate and the demo can be shar
 https://marketintel.radai-1984.dev
 ```
 
+Current status: the DNS record is configured, Vercel issued the certificate, and the custom domain is live.
+
 Usually this is either:
 
 ```text
@@ -100,7 +102,7 @@ After DNS propagation, the demo will open on the custom domain.
 I built an API-first MVP skeleton for an AI market intelligence SaaS for Etsy toy sellers.
 
 Live demo:
-https://etsy-ai-market-intel.vercel.app
+https://marketintel.radai-1984.dev
 
 GitHub:
 https://github.com/basisabp1984/etsy-ai-market-intel

@@ -2,7 +2,7 @@
 
 This is a complete demo SaaS prototype built with Next.js, React, TypeScript, and Tailwind CSS.
 
-Live demo: https://etsy-ai-market-intel.vercel.app
+Live demo: https://marketintel.radai-1984.dev
 
 GitHub repository: https://github.com/basisabp1984/etsy-ai-market-intel
 
@@ -22,7 +22,7 @@ Then open `http://localhost:3000`.
 The deployed demo is available at:
 
 ```text
-https://etsy-ai-market-intel.vercel.app
+https://marketintel.radai-1984.dev
 ```
 
 ## What Is Included
