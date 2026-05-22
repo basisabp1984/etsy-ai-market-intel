@@ -52,6 +52,7 @@ The frontend consumes mock API routes as if they were real backend endpoints:
 - `GET /api/trends`
 - `GET /api/competitors`
 - `GET /api/products`
+- `GET /api/research`
 - `POST /api/research/run`
 - `POST /api/ai/analyze`
 - `GET /api/reports`

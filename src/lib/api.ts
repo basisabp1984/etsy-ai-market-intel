@@ -1,4 +1,4 @@
-import { Competitor, Product, Report, Trend } from "@/types";
+import { Competitor, Product, Report, ResearchRun, Trend } from "@/types";
 
 type ApiResponse<T> = {
   data: T;
@@ -37,6 +37,10 @@ export async function getProducts() {
 
 export async function getReports() {
   return apiFetch<ApiResponse<Report[]>>("/api/reports");
+}
+
+export async function getResearchRuns() {
+  return apiFetch<ApiResponse<ResearchRun[]>>("/api/research");
 }
 
 export async function runResearch(payload: { title: string; scope: string }) {

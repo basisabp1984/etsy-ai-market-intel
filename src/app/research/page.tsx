@@ -1,11 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/Badge";
-import { researchRuns } from "@/lib/mock-data";
+import { ResearchRun } from "@/types";
 
 export default function ResearchPage() {
-  const [runs] = useState(researchRuns);
+  const [runs, setRuns] = useState<ResearchRun[]>([]);
+
+  useEffect(() => {
+    void fetch("/api/research")
+      .then((res) => res.json())
+      .then((res) => setRuns(res.data));
+  }, []);
 
   return (
     <div className="space-y-6 pb-28 lg:pb-6">
